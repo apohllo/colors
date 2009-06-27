@@ -1,4 +1,4 @@
-require 'iconv'
+# encoding: utf-8
 
 class String 
   HL = {
@@ -30,16 +30,6 @@ class String
     else
       HL[type] + self.to_s + HL[:end]
     end
-  end
-  
-  # allow easy conversion from UTF-8 to iso
-  def to_iso
-    Iconv.conv('iso-8859-2','utf-8',self)
-  end
-
-  # allow easy conversion from iso to UTF-8
-  def to_utf
-    Iconv.iconv('utf-8','iso-8859-2',self)
   end
 end
 
