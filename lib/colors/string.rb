@@ -19,6 +19,7 @@ class String
     :lightblue_bg => "[30;101m",
     :white_bg => "[30;101m",
     :bold => "[1m",
+    :default => "[1m"
   }
 
 

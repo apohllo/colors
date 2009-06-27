@@ -1,6 +1,6 @@
 task :default => [:install]
 
-$gem_name = "nlp"
+$gem_name = "colors"
 
 desc "Build the gem"
 task :build do
