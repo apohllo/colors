@@ -8,10 +8,14 @@ Gem::Specification.new do |s|
   s.description = "Extensions for String highliting"
   s.has_rdoc = false
   s.authors = ['Aleksander Pohl']
-  s.files = ["Rakefile", "colors.gemspec", 'lib/colors.rb', 'lib/colors/string.rb']  
+  s.files = ["Rakefile", "colors.gemspec", 'lib/colors.rb', 'lib/colors/string.rb',
+    'README.txt', 'features/color.feature']  
   #s.autorequire = 'lib/colors.rb'
-  s.test_files = []
-  #s.rdoc_options = ["--main", "README.txt"]
-  #s.extra_rdoc_files = ["History.txt", "Manifest.txt", "README.txt"]
+  s.test_files = [
+    'features/color.feature'
+  ]
+  s.rdoc_options = ["--main", "README.txt"]
+  s.has_rdoc = true
+  s.extra_rdoc_files = ["README.txt"]
 end
 
