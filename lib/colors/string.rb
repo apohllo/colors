@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 class String 
-  HL = {
+  HIGHLIGHT = {
     :end => "[0m",
     :gray => "[30;1m",
     :red => "[31;1m",
@@ -23,13 +23,21 @@ class String
   }
 
 
-  # allow string highlithing with unix terminal codes
+  # Allow string highlighting with Unix terminal codes.
+  # The +type+ of highlighting might be :bold, a color, e.g. :red, :blue
+  # or a background color, e.g. :red_bg, blue_bg, etc.
+  #
+  # If the +word+ is given, only the word will be highlighted. 
+  # It is directly expanded in the Regexp, so you may use meta-characters,
+  # e.g. (John|Frank|Bill). It is also surrounded by anchors, so only
+  # whole words will be highlighted, e.g. "abc abcd".hl(:bold,"abc") 
+  # => *abc* abcd
   def hl(type=:bold,word=nil)
     if word
       self.gsub(/(\s|\A|[[:punct:]])#{word}(\s|\Z|[[:punct:]])/,
-        "\\1" + HL[type] + word.to_s + HL[:end] + "\\2")
+        "\\1" + HIGHLIGHT[type] + word.to_s + HIGHLIGHT[:end] + "\\2")
     else
-      HL[type] + self.to_s + HL[:end]
+      HIGHLIGHT[type] + self.to_s + HIGHLIGHT[:end]
     end
   end
 end
