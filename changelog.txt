@@ -1,0 +1,7 @@
+0.0.3
+  - more documentation
+  - constant name changed, when releasing to public
+0.0.2
+  - character trancoding calls removed
+0.0.1
+  - initial implementation with additional calls to_utf, to_iso
