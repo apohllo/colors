@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "colors"
-  s.version = "0.0.3"
+  s.version = "0.0.4"
   s.date = "2009-07-15"
   s.summary = "Ruby String extesion for colored strings"
   s.email = "apohllo@o2.pl"
