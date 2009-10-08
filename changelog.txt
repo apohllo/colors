@@ -1,5 +1,9 @@
+0.0.6
+	- README update - gemcutter repository instead of github
+0.0.5
+  - homepage changed to github.com/apohllo/colors
 0.0.4
-  - changelog.txt added to gemspec
+  - fix: missing changelog.txt added
 0.0.3
   - more documentation
   - constant name changed, when releasing to public

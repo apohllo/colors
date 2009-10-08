@@ -4,40 +4,60 @@
 
 == DESCRIPTION:
 
-Colorful string in Ruby!
+Colorful strings in Ruby!
 
 == FEATURES/PROBLEMS:
 
 * whole/partial string colorization is  possible
 
+* if you use Readline, there might be some problems with multiline strings
+
 == SYNOPSIS:
 
 Colors is an extension for Ruby String class, which provides colorful strings.
-It uses ANSI control sequences, thus is available in any ANSI-compliant
+It uses ANSI control sequences, thus works in any ANSI-compliant
 terminal.
 
 == INSTALL:
 
-You need RubyGems v. 1.2 
+You need RubyGems v. 1.3.3
 
-* gem -v 
-* 1.2.0 #=> ok
+  $ gem -v 
+  1.2.0 #=> NOT ok
+  $ gem update --system
+  $ gem -v 
+  1.3.3 #=> OK 
 
-You need the github.com repository to be added to your sources list:
 
-* gem sources -a http://gems.github.com
+You need the gemcutter.org repository to be added to your sources list:
+
+  $ gem sources -a http://gemcutter.org
 
 Then you can type:
 
-* sudo gem install apohllo-colors
+  $ sudo gem install colors
+
+If you see error: 
+  ERROR:  could not find gem cyc-console locally or in a repository
+
+try installing the gemcutter gem, and issuing
+the gem tumble command:
+
+  $ sudo gem install gemcutter
+  $ sudo gem tumble
+
+And then try to install the gem once again:
+
+  $ sudo gem install colors
 
 == BASIC USAGE: 
 
 Require the gem:
 
+  require 'rubygems'
   require 'colors'
 
-Get the string bold with +hl+:
+Get the string bolded with +hl+:
   
   "abc".hl #=> *abc*
 

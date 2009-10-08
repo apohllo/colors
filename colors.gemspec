@@ -1,11 +1,12 @@
 Gem::Specification.new do |s|
   s.name = "colors"
-  s.version = "0.0.4"
-  s.date = "2009-07-15"
+  s.version = "0.0.6"
+  s.date = "2009-10-08"
   s.summary = "Ruby String extesion for colored strings"
   s.email = "apohllo@o2.pl"
-  s.homepage = "http://apohllo.pl"
-  s.description = "Extensions for String highliting"
+  s.homepage = "http://github.com/apohllo/colors"
+  s.description = "Extensions for String highliting. 
+  It uses ANSI escape sequences to produce colorful strings."
   s.has_rdoc = false
   s.authors = ['Aleksander Pohl']
   s.files = ["Rakefile", 
